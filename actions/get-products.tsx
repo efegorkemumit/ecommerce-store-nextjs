@@ -1,4 +1,4 @@
-import { Category, Product } from '@/type'
+import { Product } from '@/type'
 import React from 'react'
 import queryString from 'query-string';
 
@@ -23,7 +23,7 @@ const getProducts = async(query: Query): Promise<Product[]> => {
         }
     })
 
-    const res = await fetch(URLs);
+    const res = await fetch(url);
 
     return res.json();
 
