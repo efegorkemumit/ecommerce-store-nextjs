@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { Tab } from '@headlessui/react'
 import { Image } from '@/type';
