@@ -1,13 +1,22 @@
+'use client'
+
 import { Product } from '@/type'
 import React from 'react'
 import CurrencyTL from '../currency'
 import { Button } from '../ui/button'
 import { ShoppingBasket } from 'lucide-react'
+import useCart from '@/hooks/use-cart'
 interface InfoProps{
     data:Product
 }
 
 const Info = ({data}:InfoProps) => {
+
+    const cart = useCart();
+
+    const onAddCart = ()=>{
+        cart.addItem(data)
+    }
   return (
     <div>
         <h1 className='text-3xl font-bold'>{data.name}</h1>
@@ -36,7 +45,7 @@ const Info = ({data}:InfoProps) => {
             </div>
 
             <div className='mt-10 flex items-center gap-2'>
-                <Button  variant="destructive">
+                <Button onClick={onAddCart}  variant="destructive">
                     <ShoppingBasket size={20} className='mr-2' />    Add to cart
               
                 
