@@ -3,6 +3,7 @@ import Container from './Container'
 import Link from 'next/link'
 import getCategories from '@/actions/get-categories'
 import Menu from './Menu'
+import Navcart from './Navcart'
 
 const Navbar = async() => {
 
@@ -19,9 +20,12 @@ const Navbar = async() => {
                 </Link>
 
                 <Menu data={categories}></Menu>
+                <Navcart/>
 
 
             </div>
+
+        
 
 
         </Container>
