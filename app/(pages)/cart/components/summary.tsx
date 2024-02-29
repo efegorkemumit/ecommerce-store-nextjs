@@ -3,6 +3,7 @@
 import CurrencyTL from '@/components/currency'
 import { Button } from '@/components/ui/button'
 import useCart from '@/hooks/use-cart'
+import axios from 'axios'
 import React from 'react'
 
 const Summary = () => {
@@ -16,6 +17,12 @@ const Summary = () => {
     }, 0)
 
     const onCheckout = async()=>{
+
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+        productIds: items.map((item)=>item.id)
+      }) ;
+
+      window.location = response.data.url
 
         
     }
