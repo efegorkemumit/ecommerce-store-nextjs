@@ -32,7 +32,7 @@
 ## LINKS
 
 
-Video Tutorial :  15.03.2024   19:00 da yayında
+Video Tutorial :   https://youtu.be/X-TaxHALtVE
 
 
 
